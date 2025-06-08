@@ -29,11 +29,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_GUI>,
-                <&macro_wait_time 50>,
-                <&kp TAB>,
+                <&kp LEFT_GUI &kp TAB>,
                 <&macro_release>,
-                <&kp LEFT_GUI &kp TAB>;
+                <&kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
 
             label = "NEW_MACRO";
         };
@@ -65,7 +66,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp LG(R)             &kp KP_DIVIDE  &kp N7  &kp N8        &kp N9                 &kp PLUS           &kp LC(SPACE)   &kp K_PLAY_PAUSE  &kp LS(LA(LC(LG(H))))  &kp LC(LA(LG(LS(L))))  &kp C_BRIGHTNESS_INC  &kp DEL
+&kp LG(R)             &kp KP_DIVIDE  &kp N7  &kp N8        &kp N9                 &kp PLUS           &kp LC(SPACE)   &kp C_PLAY_PAUSE  &kp LS(LA(LC(LG(H))))  &kp LC(LA(LG(LS(L))))  &kp C_BRIGHTNESS_INC  &kp DEL
 &kp LG(LEFT_BRACKET)  &kp NUMBER_0   &kp N4  &kp N5        &kp N6                 &kp KP_SUBTRACT    &kp LEFT_ARROW  &kp DOWN          &kp UP                 &kp RIGHT              &kp C_BRIGHTNESS_DEC  &kp LG(RIGHT_BRACKET)
 &kp LCTRL             &kp KP_EQUAL   &kp N1  &kp N2        &kp N3                 &kp KP_MULTIPLY    &kp K_MUTE      &kp K_VOLUME_UP   &kp K_VOLUME_DOWN      &kp LEFT_ALT           &kp LCTRL             &trans
                                              &kp LEFT_GUI  &kp LG(LC(LA(LS(J))))  &alt_tab           &trans          &trans            &trans
