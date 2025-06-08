@@ -53,10 +53,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp KP_DIVIDE   &kp N7  &kp N8  &kp N9                 &kp PLUS           &kp LC(SPACE)  &kp K_PLAY_PAUSE  &kp LS(LA(LC(LG(H))))  &kp LC(LA(LG(LS(L))))  &kp C_BRIGHTNESS_INC  &kp DEL
-&trans  &kp KP_EQUAL    &kp N4  &kp N5  &kp N6                 &kp KP_SUBTRACT    &kp LEFT       &kp DOWN          &kp UP                 &kp RIGHT              &kp C_BRIGHTNESS_DEC  &trans
-&trans  &kp LEFT_SHIFT  &kp N1  &kp N2  &kp N3                 &kp KP_MULTIPLY    &kp K_MUTE     &kp K_VOLUME_UP   &kp K_VOLUME_DOWN      &kp LEFT_ALT           &kp LCTRL             &trans
-                                &kp N0  &kp LG(LC(LA(LS(J))))  &kp LG(SPACE)      &trans         &trans            &trans
+&trans  &kp KP_DIVIDE   &kp N7  &kp N8  &kp N9                 &kp PLUS           &kp LC(SPACE)              &kp K_PLAY_PAUSE  &kp LS(LA(LC(LG(H))))  &kp LC(LA(LG(LS(L))))        &kp C_BRIGHTNESS_INC  &kp DEL
+&trans  &kp KP_EQUAL    &kp N4  &kp N5  &kp N6                 &kp KP_SUBTRACT    &mt LG(LEFT_BRACKET) LEFT  &kp DOWN          &kp UP                 &mt LG(RIGHT_BRACKET) RIGHT  &kp C_BRIGHTNESS_DEC  &trans
+&trans  &kp LEFT_SHIFT  &kp N1  &kp N2  &kp N3                 &kp KP_MULTIPLY    &kp K_MUTE                 &kp K_VOLUME_UP   &kp K_VOLUME_DOWN      &kp LEFT_ALT                 &kp LCTRL             &trans
+                                &kp N0  &kp LG(LC(LA(LS(J))))  &kp LG(SPACE)      &trans                     &trans            &trans
             >;
         };
 
