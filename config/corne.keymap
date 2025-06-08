@@ -23,10 +23,26 @@
         };
     };
 
+    macros {
+        alt_tab: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_wait_time 50>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp TAB>;
+
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        window {
+        main {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -52,7 +68,7 @@
 &kp LG(R)             &kp KP_DIVIDE  &kp N7  &kp N8        &kp N9                 &kp PLUS           &kp LC(SPACE)   &kp K_PLAY_PAUSE  &kp LS(LA(LC(LG(H))))  &kp LC(LA(LG(LS(L))))  &kp C_BRIGHTNESS_INC  &kp DEL
 &kp LG(LEFT_BRACKET)  &kp NUMBER_0   &kp N4  &kp N5        &kp N6                 &kp KP_SUBTRACT    &kp LEFT_ARROW  &kp DOWN          &kp UP                 &kp RIGHT              &kp C_BRIGHTNESS_DEC  &kp LG(RIGHT_BRACKET)
 &kp LCTRL             &kp KP_EQUAL   &kp N1  &kp N2        &kp N3                 &kp KP_MULTIPLY    &kp K_MUTE      &kp K_VOLUME_UP   &kp K_VOLUME_DOWN      &kp LEFT_ALT           &kp LCTRL             &trans
-                                             &kp LEFT_GUI  &kp LG(LC(LA(LS(J))))  &kp LG(SPACE)      &trans          &trans            &trans
+                                             &kp LEFT_GUI  &kp LG(LC(LA(LS(J))))  &alt_tab           &trans          &trans            &trans
             >;
         };
 
@@ -64,10 +80,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp LG(Q)  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp UNDER        &kp CARET  &kp LEFT_BRACE         &kp RIGHT_BRACE        &kp DOLLAR  &kp SINGLE_QUOTE   &trans
-&trans     &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH   &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DOUBLE_QUOTES  &trans
-&trans     &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT     &kp COLON              &kp COMMA              &kp PERIOD  &kp PIPE           &trans
-                                           &trans            &trans             &trans           &kp LC(R)  &kp LS(LC(LG(LA(K))))  &kp ESCAPE
+&kp LG(Q)  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp UNDER        &kp CARET                 &kp LEFT_BRACE         &kp RIGHT_BRACE        &kp DOLLAR  &kp SINGLE_QUOTE   &trans
+&trans     &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH                  &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DOUBLE_QUOTES  &trans
+&trans     &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT                    &kp COLON              &kp COMMA              &kp PERIOD  &kp PIPE           &trans
+                                           &trans            &trans             &trans           &kp LC(LS(LA(LEFT_GUI)))  &kp LS(LC(LG(LA(K))))  &kp LG(F3)
             >;
         };
 
