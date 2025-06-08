@@ -9,21 +9,17 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        mac_layout: mac_layout {
-            compatible = "zmk,behavior-key-toggle";
-            label = "MAC_LAYOUT";
-            #binding-cells = <1>;
-            toggle-mode = "flip";
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
-        both_layer {
+        backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <37 40>;
+        };
+
+        bluetooth {
+            bindings = <&mo 3>;
+            key-positions = <38 39>;
         };
     };
 
@@ -38,10 +34,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mt LC(C) ESCAPE               &kp Q  &kp W  &kp E     &kp R            &kp T        &kp Y    &kp U            &kp I      &kp O    &kp P     &kp UNDER
-&mt LEFT_SHIFT DOUBLE_QUOTES   &kp A  &kp S  &kp D     &kp F            &kp G        &kp H    &kp J            &kp K      &kp L    &kp SEMI  &mt RIGHT_SHIFT COLON
-&mt LEFT_CONTROL SINGLE_QUOTE  &kp Z  &kp X  &kp C     &kp V            &lt 3 B      &kp N    &kp M            &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_CONTROL MINUS
-                                             &kp LGUI  &lt 2 BACKSPACE  &kp SPACE    &kp RET  &lt 1 BACKSPACE  &kp LCTRL
+&mt LC(C) ESCAPE               &kp Q  &kp W  &kp E     &kp R            &kp T        &kp Y                           &kp U            &kp I      &kp O    &kp P     &mt BACKSPACE UNDERSCORE
+&mt LEFT_SHIFT DOUBLE_QUOTES   &kp A  &kp S  &kp D     &kp F            &kp G        &kp H                           &kp J            &kp K      &kp L    &kp SEMI  &mt RIGHT_SHIFT COLON
+&mt LEFT_CONTROL SINGLE_QUOTE  &kp Z  &kp X  &kp C     &kp V            &kp B        &kp N                           &kp M            &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_CONTROL MINUS
+                                             &kp LGUI  &lt 2 BACKSPACE  &kp SPACE    &mt LS(LA(LC(LEFT_GUI))) ENTER  &lt 1 BACKSPACE  &kp LCTRL
             >;
         };
 
@@ -53,10 +49,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp KP_DIVIDE  &kp N7  &kp N8        &kp N9                 &kp PLUS           &kp LC(SPACE)              &kp K_PLAY_PAUSE  &kp LS(LA(LC(LG(H))))  &kp LC(LA(LG(LS(L))))        &kp C_BRIGHTNESS_INC  &kp DEL
-&trans  &kp NUMBER_0   &kp N4  &kp N5        &kp N6                 &kp KP_SUBTRACT    &mt LG(LEFT_BRACKET) LEFT  &kp DOWN          &kp UP                 &mt LG(RIGHT_BRACKET) RIGHT  &kp C_BRIGHTNESS_DEC  &trans
-&trans  &kp KP_EQUAL   &kp N1  &kp N2        &kp N3                 &kp KP_MULTIPLY    &kp K_MUTE                 &kp K_VOLUME_UP   &kp K_VOLUME_DOWN      &kp LEFT_ALT                 &kp LCTRL             &trans
-                               &kp NUMBER_0  &kp LG(LC(LA(LS(J))))  &kp LG(SPACE)      &trans                     &trans            &trans
+&kp LG(R)             &kp KP_DIVIDE  &kp N7  &kp N8        &kp N9                 &kp PLUS           &kp LC(SPACE)   &kp K_PLAY_PAUSE  &kp LS(LA(LC(LG(H))))  &kp LC(LA(LG(LS(L))))  &kp C_BRIGHTNESS_INC  &kp DEL
+&kp LG(LEFT_BRACKET)  &kp NUMBER_0   &kp N4  &kp N5        &kp N6                 &kp KP_SUBTRACT    &kp LEFT_ARROW  &kp DOWN          &kp UP                 &kp RIGHT              &kp C_BRIGHTNESS_DEC  &kp LG(RIGHT_BRACKET)
+&kp LCTRL             &kp KP_EQUAL   &kp N1  &kp N2        &kp N3                 &kp KP_MULTIPLY    &kp K_MUTE      &kp K_VOLUME_UP   &kp K_VOLUME_DOWN      &kp LEFT_ALT           &kp LCTRL             &trans
+                                             &kp LEFT_GUI  &kp LG(LC(LA(LS(J))))  &kp LG(SPACE)      &trans          &trans            &trans
             >;
         };
 
@@ -68,10 +64,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp UNDER        &kp CARET  &kp LEFT_BRACE         &kp RIGHT_BRACE        &kp DOLLAR  &kp SINGLE_QUOTE   &trans
-&trans  &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH   &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DOUBLE_QUOTES  &trans
-&trans  &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT     &kp COLON              &kp COMMA              &kp PERIOD  &kp PIPE           &trans
-                                        &trans            &trans             &trans           &kp LC(R)  &kp LS(LC(LG(LA(K))))  &kp ESCAPE
+&kp LG(Q)  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp UNDER        &kp CARET  &kp LEFT_BRACE         &kp RIGHT_BRACE        &kp DOLLAR  &kp SINGLE_QUOTE   &trans
+&trans     &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH   &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DOUBLE_QUOTES  &trans
+&trans     &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT     &kp COLON              &kp COMMA              &kp PERIOD  &kp PIPE           &trans
+                                           &trans            &trans             &trans           &kp LC(R)  &kp LS(LC(LG(LA(K))))  &kp ESCAPE
             >;
         };
 
