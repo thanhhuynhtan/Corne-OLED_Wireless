@@ -67,7 +67,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE      &kp KP_DIVIDE  &kp N7        &kp N8     &kp N9                 &kp PLUS           &kp LG(Q)       &kp LC(SPACE)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(RIGHT_BRACKET)  &kp DEL
+&kp ESCAPE      &kp KP_DIVIDE  &kp N7        &kp N8     &kp N9                 &kp PLUS           &kp LG(LC(Q))   &kp LC(SPACE)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(RIGHT_BRACKET)  &kp DEL
 &kp LEFT_SHIFT  &kp NUMBER_0   &kp NUMBER_4  &kp N5     &kp NUMBER_6           &kp KP_SUBTRACT    &kp LEFT_ARROW  &kp DOWN       &kp UP              &kp RIGHT            &kp LG(LEFT_BRACKET)   &kp RIGHT_SHIFT
 &kp LCTRL       &kp KP_EQUAL   &kp N1        &kp N2     &kp N3                 &kp KP_MULTIPLY    &kp LG(W)       &kp LG(R)      &kp LC(LS(TAB))     &kp LC(TAB)          &kp LCTRL              &kp RCTRL
                                              &kp LG(A)  &kp LG(LC(LA(LS(J))))  &alt_tab           &trans          &trans         &trans
