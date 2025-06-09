@@ -72,10 +72,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE      &kp KP_DIVIDE  &kp N7        &kp N8     &kp N9                 &kp PLUS           &kp LG(LC(Q))   &kp LC(SPACE)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(RIGHT_BRACKET)  &kp DEL
-&sk LEFT_SHIFT  &kp NUMBER_0   &kp NUMBER_4  &kp N5     &kp NUMBER_6           &kp KP_SUBTRACT    &kp LEFT_ARROW  &kp DOWN       &kp UP              &kp RIGHT            &kp LG(LEFT_BRACKET)   &sk RIGHT_SHIFT
-&sk LCTRL       &kp KP_EQUAL   &kp N1        &kp N2     &kp N3                 &kp KP_MULTIPLY    &kp LG(LS(T))   &kp LG(R)      &kp LC(LS(TAB))     &kp LC(TAB)          &kp LG(W)              &sk RCTRL
-                                             &kp LG(A)  &kp LG(LC(LA(LS(J))))  &alt_tab           &trans          &trans         &trans
+&kp ESCAPE      &kp KP_DIVIDE  &kp N7        &kp N8     &kp N9                         &kp PLUS           &kp LG(LC(Q))   &kp LC(SPACE)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(RIGHT_BRACKET)  &kp DEL
+&sk LEFT_SHIFT  &kp NUMBER_0   &kp NUMBER_4  &kp N5     &kp NUMBER_6                   &kp KP_SUBTRACT    &kp LEFT_ARROW  &kp DOWN       &kp UP              &kp RIGHT            &kp LG(LEFT_BRACKET)   &sk RIGHT_SHIFT
+&sk LCTRL       &kp KP_EQUAL   &kp N1        &kp N2     &kp N3                         &kp KP_MULTIPLY    &kp LG(LS(T))   &kp LG(R)      &kp LC(LS(TAB))     &kp LC(TAB)          &kp LG(W)              &sk RCTRL
+                                             &kp LG(A)  &kp LG(LC(LA(LS(BACKSLASH))))  &alt_tab           &trans          &trans         &trans
             >;
         };
 
@@ -87,10 +87,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp BACKSLASH    &kp CARET      &kp LEFT_BRACE         &kp RIGHT_BRACE        &kp SINGLE_QUOTE   &kp DOLLAR  &trans
-&trans  &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH       &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp SEMI    &trans
-&trans  &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT         &kp UNDERSCORE         &kp COMMA              &kp PERIOD         &kp PIPE    &trans
-                                        &trans            &trans             &trans           &kp LG(SPACE)  &kp LS(LC(LG(LA(K))))  &kp F11
+&trans  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp BACKSLASH    &kp CARET      &kp LEFT_BRACE             &kp RIGHT_BRACE        &kp SINGLE_QUOTE   &kp DOLLAR  &trans
+&trans  &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH       &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp SEMI    &trans
+&trans  &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT         &kp UNDERSCORE             &kp COMMA              &kp PERIOD         &kp PIPE    &trans
+                                        &trans            &trans             &trans           &kp LG(SPACE)  &kp LS(LC(LG(LA(GRAVE))))  &kp F11
             >;
         };
 
