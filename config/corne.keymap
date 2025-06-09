@@ -27,11 +27,6 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <12 23>;
         };
-
-        power_key {
-            bindings = <&kp LA(LC(LG(LEFT_SHIFT)))>;
-            key-positions = <36 41>;
-        };
     };
 
     macros {
@@ -101,10 +96,10 @@
 
         utility {
             bindings = <
-&bt BT_SEL 0  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &trans          &kp C_PREVIOUS  &mmv MOVE_UP    &kp C_NEXT       &trans  &bt BT_SEL 3
-&bt BT_SEL 1  &trans                &trans                &mkp RCLK          &mkp LCLK        &kp C_PLAY    &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &bt BT_SEL 4
-&bt BT_SEL 2  &trans                &trans                &bt BT_PRV         &bt BT_NXT       &trans        &studio_unlock  &trans          &trans          &trans           &trans  &bt BT_CLR
-                                                          &trans             &trans           &trans        &trans          &trans          &trans
+&bt BT_SEL 0  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE       &trans          &kp C_PREVIOUS  &mmv MOVE_UP    &kp C_NEXT       &trans  &bt BT_SEL 3
+&bt BT_SEL 1  &kp LA(LC(A))         &kp LA(LC(S))         &kp LA(LC(D))      &kp LA(LC(F))    &kp LC(LA(G))    &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &bt BT_SEL 4
+&bt BT_SEL 2  &trans                &trans                &bt BT_PRV         &bt BT_NXT       &kp C_PLAY       &studio_unlock  &trans          &trans          &trans           &trans  &bt BT_CLR
+                                                          &mkp MCLK          &mkp RCLK        &mkp LCLK        &trans          &trans          &trans
             >;
         };
     };
