@@ -72,10 +72,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE      &kp KP_DIVIDE  &kp N7        &kp N8  &kp N9                         &kp PLUS           &kp LG(LC(Q))          &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans  &trans         &kp DEL
-&sk LEFT_SHIFT  &kp NUMBER_0   &kp NUMBER_4  &kp N5  &kp NUMBER_6                   &kp KP_SUBTRACT    &kp LG(LEFT_BRACKET)   &kp LEFT            &kp DOWN             &kp UP  &kp RIGHT      &sk RIGHT_SHIFT
-&sk LCTRL       &kp KP_EQUAL   &kp N1        &kp N2  &kp N3                         &kp KP_MULTIPLY    &kp LG(RIGHT_BRACKET)  &kp LC(LS(TAB))     &kp LC(TAB)          &trans  &kp LC(SPACE)  &sk RCTRL
-                                             &trans  &kp LG(LC(LA(LS(BACKSLASH))))  &alt_tab           &trans                 &trans              &trans
+&kp ESCAPE      &kp KP_DIVIDE  &kp N7        &kp N8  &kp N9                         &kp PLUS           &kp LG(LC(Q))  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans  &trans         &kp DEL
+&sk LEFT_SHIFT  &kp NUMBER_0   &kp NUMBER_4  &kp N5  &kp NUMBER_6                   &kp KP_SUBTRACT    &trans         &kp LEFT              &kp DOWN               &kp UP  &kp RIGHT      &sk RIGHT_SHIFT
+&sk LCTRL       &kp KP_EQUAL   &kp N1        &kp N2  &kp N3                         &kp KP_MULTIPLY    &trans         &kp LC(LS(TAB))       &kp LC(TAB)            &trans  &kp LC(SPACE)  &sk RCTRL
+                                             &trans  &kp LG(LC(LA(LS(BACKSLASH))))  &alt_tab           &trans         &trans                &trans
             >;
         };
 
@@ -96,10 +96,10 @@
 
         utility {
             bindings = <
-&bt BT_SEL 0  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE       &trans          &kp C_PREVIOUS  &mmv MOVE_UP    &kp C_NEXT       &trans  &bt BT_SEL 3
-&bt BT_SEL 1  &kp LA(LC(A))         &kp LA(LC(S))         &kp LA(LC(D))      &kp LA(LC(F))    &kp LC(LA(G))    &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &bt BT_SEL 4
-&bt BT_SEL 2  &trans                &trans                &bt BT_PRV         &bt BT_NXT       &kp C_PLAY       &studio_unlock  &trans          &trans          &trans           &trans  &bt BT_CLR
-                                                          &mkp MCLK          &mkp RCLK        &mkp LCLK        &trans          &trans          &trans
+&bt BT_SEL 0  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN   &kp C_VOLUME_UP      &kp C_MUTE       &bt BT_PRV      &kp C_PREVIOUS  &mmv MOVE_UP    &kp C_NEXT    &trans           &bt BT_SEL 3
+&bt BT_SEL 1  &kp LA(LC(A))         &kp LA(LC(S))         &kp LA(LC(D))       &kp LA(LC(F))        &kp LC(LA(G))    &bt BT_NXT      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bt BT_SEL 4
+&bt BT_SEL 2  &trans                &trans                &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans           &studio_unlock  &trans          &trans          &trans        &trans           &bt BT_CLR
+                                                          &mkp MCLK           &mkp RCLK            &mkp LCLK        &trans          &trans          &trans
             >;
         };
     };
