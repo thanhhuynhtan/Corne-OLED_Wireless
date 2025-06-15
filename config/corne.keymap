@@ -13,12 +13,12 @@
     combos {
         compatible = "zmk,combos";
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
+        delete_all {
+            bindings = <&delete_all>;
             key-positions = <37 40>;
         };
 
-        bluetooth {
+        undo {
             bindings = <&kp LG(Z)>;
             key-positions = <38 39>;
         };
@@ -43,6 +43,14 @@
                 <&kp LEFT_GUI>;
 
             label = "NEW_MACRO";
+        };
+
+        delete_all: delete_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LG(A) &kp BACKSPACE>;
+
+            label = "DELETE_ALL";
         };
     };
 
